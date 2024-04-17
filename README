@@ -1,0 +1,21 @@
+A clear GIN 24 theme.
+I hope you like it, it is hard work due to the fact of cleaning the scripts and more configurations, generally in my other jobs I am a bit of a disaster.
+That is why when having to share the files they are organized, more or less.
+
+niivu project creator
+
+Distro: Archlinux
+wm:Xfce4-xfwm4
+Panel: Polybar
+Terminal: Urxvt
+Shell: zsh
+Web browser: Qutebrowser
+File Manager: Thunar
+Icon Folders: Made by me
+Other App: rofi, neofetch, ncmpcpp
+Wallpaper: Made by me
+Download link: 
+
+For those who want to have the Image in the terminal, you must have rxvt-unicode-pixbuf installed.
+Then copy .pixmap.png to /home/user/.pixmap.png
+
