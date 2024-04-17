@@ -1,0 +1,418 @@
+;; Global WM Settings ;;first
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+# load files #
+include-file = ./system
+#include-file = ./colors
+
+# contains brightness, workspaces, Date, etc.... #
+include-file = ./modules/modules
+
+# contains Music, microphone, etc.... #
+include-file = ./modules/mediaModules
+
+# contains CPU, Temperature, etc.... #
+include-file = ./modules/monitoringModules
+
+# contains the separators (e.g  , | , <| ,  ,etc..) #
+include-file = ./modules/separatorsModules
+
+# contains the Apps (e.g chrome, etc..) #
+include-file = ./modules/Apps
+
+## ----------------------------------#86A89C  [bar/first] ---------------------------------- ##
+[bar/first]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 23%
+height = 45
+
+offset-x = 40.7%
+offset-y = 8
+
+background = #ffffff
+foreground = #2a7766
+
+radius-top-left    = 20
+radius-bottom-right = 20
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 0
+border-color = #ffffff
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   =
+modules-center = space workspaces space 
+modules-right  =
+ 
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+
+wm-name = bspwm
+locale = 
+
+## ----------------------------------  [bar/sec] ---------------------------------- ##
+
+[bar/sec]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 4%
+height = 45
+
+offset-x = 95%
+offset-y = 8
+
+background = #93bd4d
+foreground = #ffffff
+
+radius-top-left    = 20
+radius-bottom-right = 20
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 0
+border-color = #93bd4d
+
+padding = 0
+module-margin-left = 2.5
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   =
+modules-center = sysmenu
+modules-right  =
+ 
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+
+wm-name = bspwm
+locale = 
+
+## ----------------------------------  [bar/third] ---------------------------------- ##
+
+[bar/third]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 4%
+height = 45
+
+offset-x = 89.0%
+offset-y = 8
+
+background = #ffffff
+foreground = #2a7766
+
+radius-top-left    = 20
+radius-bottom-right = 20
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 0
+border-color = #ffffff
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   =
+modules-center = volume
+modules-right  =
+ 
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+
+wm-name = bspwm
+locale = 
+
+
+## ----------------------------------  [bar/fourth] ---------------------------------- ##
+
+[bar/fourth]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = true
+fixed-center = true
+
+width = 30%
+height = 45
+
+offset-x = 36%
+offset-y = 8
+
+background = #ffffff
+foreground = #2a7766
+
+radius-top-left    = 20
+radius-bottom-right = 20
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 0
+border-color = #ffffff
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   = space song-icon
+modules-center = song
+modules-right  = mpd
+
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+
+wm-name = bspwm
+locale = 
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+
+screenchange-reload = false
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+## ----------------------------------  [bar/fifth] ---------------------------------- ##
+
+[bar/fifth]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 6%
+height = 45
+
+offset-x = 6.9%
+offset-y = 8
+
+background = #ffffff
+foreground = #2a7766
+
+radius-top-left    = 20
+radius-bottom-right = 20
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 0
+border-color = #ffffff
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   =
+modules-center = date 
+modules-right  = 
+
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+
+wm-name = bspwm
+locale = 
+
+## ----------------------------------  [bar/sesta] ---------------------------------- ##
+
+[bar/sesta]
+monitor = ${env:MONITOR:}
+monitor-strict = false
+override-redirect = false
+
+bottom = false
+fixed-center = true
+
+width = 4%
+height = 45
+
+offset-x = 1%
+offset-y = 8
+
+background = #65cccc
+foreground = #2a7766
+
+radius-top-left    = 20
+radius-bottom-right = 20
+
+line-size = 2
+line-color = ${color.BLUE}
+
+border-size = 0
+border-color = #65cccc
+
+padding = 0
+module-margin-left = 2.5
+module-margin-right = 0
+
+
+font-0 = "Iosevka Nerd Font:size=10;3"
+font-1 = "Iosevka Nerd Font:size=12;3"
+font-2 = "google\-mdi:size=12;3"
+font-3 = "Iosevka:style=bold:size=12;3"
+font-4 = "Iosevka Nerd Font:size=18;4"
+font-5 = "JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3"
+font-6 = "JetBrainsMono Nerd Font:size=13;4"
+font-7 = "Material Design Icons:style=Bold:size=9;3"
+font-8 = "unifont:fontformat=truetype:size=9;3"
+font-9 = "Iosevka:style=bold:size=15;4"
+
+modules-left   =
+modules-center = menu
+modules-right  =
+ 
+separator =
+spacing = 0
+
+dim-value = 1.0
+
+wm-restack = bspwm
+
+enable-ipc = true
+
+
+wm-name = bspwm
+locale = 
+
+; [settings]
+; throttle-output = 5
+; throttle-output-for = 10
+; throttle-input-for = 30
+
+; screenchange-reload = false
+
+; compositing-background = source
+; compositing-foreground = over
+; compositing-overline = over
+; compositing-underline = over
+; compositing-border = over
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

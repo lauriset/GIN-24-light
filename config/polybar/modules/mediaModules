@@ -1,0 +1,142 @@
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/volume]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = false
+interval = 5
+
+format-volume = <ramp-volume><label-volume>
+
+format-muted = <label-muted>
+format-muted-prefix = " 婢"
+format-muted-prefix-font = 3
+format-muted-prefix-foreground = #D6E43D
+format-muted-prefix-background = #ffffff
+
+label-volume = %percentage%%
+label-volume-foreground = #2a7766
+label-volume-background = #ffffff
+
+label-muted = " Mute"
+label-muted-foreground = #D6E43D
+label-muted-background = #ffffff
+
+ramp-volume-0 = " 奄 "
+ramp-volume-1 = " 奄 "
+ramp-volume-2 = " 奄 "
+ramp-volume-3 = " 奔 "
+ramp-volume-4 = " 奔 "
+ramp-volume-5 = " 奔 "
+ramp-volume-6 = " 墳 "
+ramp-volume-7 = " 墳 "
+ramp-volume-8 = " 墳 "
+ramp-volume-9 = " 墳 "
+ramp-volume-font = 3
+ramp-volume-foreground = #2a7766
+ramp-volume-background = #ffffff
+
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/mpd]
+type = internal/mpd
+interval = 2
+
+; format-online = <label-song> <icon-prev> <toggle> <icon-next>
+format-online = <icon-prev> <toggle> <icon-next>
+format-online-prefix = "  "
+format-online-foreground = #99CB02
+format-playing = ${self.format-online}
+format-paused = <icon-prev> <toggle> <icon-next>
+
+format-offline = <label-offline>
+format-offline-prefix = "  "
+format-offline-prefix-foreground = #99CB02
+
+label-offline = "Offline "
+format-offline-foreground = #2a7766
+
+; label-song =  "%title% | %artist%"
+label-song =  "%title% "
+label-song-maxlen = 60
+label-song-ellipsis = true
+
+icon-play = ""
+icon-play-font = 2
+icon-play-foreground = #2a7766
+icon-pause = ""
+icon-pause-font = 2
+icon-pause-foreground = #2a7766
+icon-stop = " "
+icon-stop-foreground = #D6E43D
+icon-prev = "玲"
+icon-prev-font = 2
+icon-prev-foreground = #D6E43D
+icon-next = "怜   "
+icon-next-font = 2
+icon-next-foreground = #D6E43D
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/song]
+type = internal/mpd
+
+interval = 2
+
+format-online = <label-song>
+format-online-foreground = #f0f1c6
+
+format-playing = ${self.format-online}
+format-paused = ${self.format-online}
+format-stopped = ${self.format-online}
+
+label-song =  "[ %title% ]"
+; label-song =  "%title% | %artist%"
+
+label-song-foreground = #2a7766
+label-song-maxlen = 60
+label-song-ellipsis = true
+
+icon-repeat = ""
+icon-repeat-foreground = #99CB02
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/song-icon]
+
+type = custom/text
+
+content = "   "
+content-font = 8
+content-foreground = #99CB02
+content-padding = 0
+click-left = ncmpcpp
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/info-cava]
+type = custom/script
+exec =  ~/.config/polybar/scripts/cava
+
+format = <label>
+label = %output%
+format-foreground = ${color.BACKGROUND}
+format-background = #ffffff
+tail = true
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/pulse-mic]
+
+type = custom/script
+exec = ~/.config/polybar/scripts/pulse-mic
+tail = true
+click-left  = ~/.config/polybar/scripts/pulse-mic --toggle &
+scroll-up   = ~/.config/polybar/scripts/pulse-mic --increase &
+scroll-down = ~/.config/polybar/scripts/pulse-mic --decrease &
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
